@@ -1,0 +1,23 @@
+[package]
+name = "cargo-refactor"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "cargo-refactor"
+path = "src/main.rs"
+
+[lib]
+name = "cargo_refactor_lib"
+path = "src/lib.rs"
+
+[dev-dependencies]
+tempfile = "3"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+syn = { version = "2", features = ["full", "visit-mut", "extra-traits"] }
+proc-macro2 = "1"
+quote = "1"
+prettyplease = "0.2"
+walkdir = "2"
